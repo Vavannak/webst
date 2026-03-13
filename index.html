@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Store – Demo</title>
+    <style>
+        /* ---------- Global Styles ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0b0f1c, #1a1f33);
+            color: #e0e0ff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ---------- Navbar (Glassmorphism) ---------- */
+        .navbar {
+            background: rgba(10, 15, 30, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(100, 150, 255, 0.2);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #a0b0ff, #ffa0c0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #c0d0ff;
+            font-weight: 500;
+            transition: 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            box-shadow: 0 0 15px #3a5f9e;
+        }
+
+        /* ---------- Hero Section ---------- */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: rgba(0, 10, 30, 0.3);
+            border-bottom: 1px solid #2a3f6e;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #fff, #b0c8ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #aab9e6;
+        }
+
+        /* ---------- Product Sections ---------- */
+        .product-section {
+            padding: 3rem 5%;
+        }
+
+        .product-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid #5f7fff;
+            padding-left: 1rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: rgba(20, 30, 60, 0.5);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 1.8rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 100, 255, 0.3);
+            border-color: #4a6eff;
+        }
+
+        .product-card h3 {
+            font-size: 1.6rem;
+            color: #c0d4ff;
+            margin-bottom: 0.8rem;
+        }
+
+        .desc {
+            color: #aab9e6;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 1.2rem 0;
+            background: linear-gradient(45deg, #b8c8ff, #ffb8d8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .buy-btn {
+            background: linear-gradient(45deg, #2a4c7c, #3a6ea5);
+            border: none;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: 0.2s;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .buy-btn:hover {
+            background: linear-gradient(45deg, #3a5c8c, #4a7eb5);
+            box-shadow: 0 0 20px #2a6eb0;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.2);
+            margin-top: auto;
+            color: #8892b0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🚀 2026Store</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to the Future of Digital Trading</h1>
+            <p>Buy premium accounts and powerful tools instantly</p>
+        </section>
+
+        <!-- Accounts Section -->
+        <section class="product-section">
+            <h2>🎭 Premium Accounts</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>Premium Netflix Account</h3>
+                    <p class="desc">4K UHD, 1 year warranty</p>
+                    <p class="price">$15.99</p>
+                    <a href="buy.html?id=1" class="buy-btn">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <h3>Spotify Premium Upgrade</h3>
+                    <p class="desc">Family plan slot, 6 months</p>
+                    <p class="price">$9.99</p>
+                    <a href="buy.html?id=2" class="buy-btn">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <h3>Disney+ 1 Year</h3>
+                    <p class="desc">All channels, no ads</p>
+                    <p class="price">$24.99</p>
+                    <a href="buy.html?id=3" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section class="product-section">
+            <h2>🛠️ Tools & Files</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>Ebook: PHP Mastery</h3>
+                    <p class="desc">Learn PHP from scratch (PDF)</p>
+                    <p class="price">$5.99</p>
+                    <a href="buy.html?id=4" class="buy-btn">Get Now</a>
+                </div>
+                <div class="product-card">
+                    <h3>Password Generator Tool</h3>
+                    <p class="desc">Portable .exe for Windows</p>
+                    <p class="price">FREE</p>
+                    <a href="buy.html?id=5" class="buy-btn">Get Now</a>
+                </div>
+                <div class="product-card">
+                    <h3>VPN Config Pack</h3>
+                    <p class="desc">100+ server configs</p>
+                    <p class="price">$12.99</p>
+                    <a href="buy.html?id=6" class="buy-btn">Get Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Store – The Future of Digital Goods (Static Demo)</p>
+    </footer>
+</body>
+</html>
