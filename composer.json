@@ -1,0 +1,5 @@
+{
+    "require": {
+        "vercel/blob": "^0.1"
+    }
+}
