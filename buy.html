@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase - 2026Store Demo</title>
+    <style> /* include base styles and purchase-card */ </style>
+</head>
+<body>
+    <nav class="navbar">...</nav>
+    <main class="purchase-container">
+        <div class="purchase-card">
+            <h2>Thank you for your purchase (Demo)!</h2>
+            <p>Product: <strong id="product-name">Loading...</strong></p>
+            <div id="account-details" style="display:none;">
+                <h3>Account Details:</h3>
+                <pre id="details-text"></pre>
+                <p style="color:red;">* Change password immediately after login.</p>
+            </div>
+            <div id="tool-download" style="display:none;">
+                <h3>Download your file:</h3>
+                <a href="#" id="download-link" class="download-btn" onclick="alert('Demo download - file not actually present.'); return false;">⬇️ Download Now</a>
+            </div>
+            <a href="index.html" class="back-link">← Continue Shopping</a>
+        </div>
+    </main>
+
+    <script>
+        // Parse URL parameters to display product info
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get('type');
+        const name = params.get('name');
+        document.getElementById('product-name').textContent = name || 'Product';
+
+        if (type === 'account') {
+            document.getElementById('account-details').style.display = 'block';
+            const details = params.get('details');
+            document.getElementById('details-text').textContent = details ? details.replace(/\\n/g, '\n') : 'No details provided.';
+        } else if (type === 'tool') {
+            document.getElementById('tool-download').style.display = 'block';
+            const file = params.get('file');
+            const link = document.getElementById('download-link');
+            link.href = '#'; // In real site, link to actual file
+            link.textContent = `⬇️ Download ${file || 'file'}`;
+        }
+    </script>
+
+    <footer>...</footer>
+</body>
+</html>
