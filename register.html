@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - 2026Store Demo</title>
+    <style> /* same style as login */ </style>
+</head>
+<body>
+    <nav class="navbar">...</nav>
+    <main class="auth-container">
+        <div class="auth-card">
+            <h2>Create Account</h2>
+            <div class="demo-note">🔧 Static demo – registration not functional.</div>
+            <form onsubmit="event.preventDefault(); alert('Demo: account created (mock). Redirecting to dashboard...'); window.location.href='dashboard.html';">
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p style="text-align:center; margin-top:1rem;">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </main>
+    <footer>...</footer>
+</body>
+</html>
