@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase - 2026Store Demo</title>
+    <style>...</style>
+</head>
+<body>
+    <nav class="navbar">...</nav>
+    <main class="purchase-container" style="display: flex; justify-content: center; align-items: center; min-height: 60vh;">
+        <div class="purchase-card" style="background: rgba(20,30,60,0.7); padding: 3rem; border-radius: 40px; max-width: 600px;">
+            <h2>Thank you for your purchase (Demo)!</h2>
+            <p>Product: <strong>Premium Netflix Account</strong></p>
+            <h3>Account Details:</h3>
+            <pre style="background:#0a1022; padding:1.5rem; border-radius:20px;">email: netflix@example.com
+pass: netflix123</pre>
+            <p style="color:red;">* Change password immediately after login.</p>
+            <a href="index.html" class="back-link">← Continue Shopping</a>
+        </div>
+    </main>
+</body>
+</html>
